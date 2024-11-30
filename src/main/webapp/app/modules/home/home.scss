@@ -1,0 +1,74 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+  min-height: 100vh;
+  max-width: 1200px; /* Define un ancho máximo */
+  margin: -8vh auto 0 auto; /* Centra horizontalmente y ajusta el margen superior */
+  background-color: transparent; /* Fondo translúcido */
+  padding: 0 15px; /* Espaciado interno para que no toque los bordes */
+
+  h2.sobre-nosotros {
+    font-family: 'TT Commons Pro', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  button {
+    background-color: #01458e !important;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #01458e;
+    }
+
+    margin-bottom: 20px; /* Añade espacio debajo del botón */
+  }
+
+  img {
+    max-width: 100%; /* La imagen se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+  }
+
+  // Ajustes para pantallas pequeñas
+  @media (max-width: 768px) {
+    flex-direction: column; /* Coloca los elementos en columna */
+    text-align: center;
+
+    img {
+      max-width: 90%; /* Reduce el ancho máximo de la imagen en pantallas pequeñas */
+      margin-top: 20px; /* Agrega espacio entre el texto y la imagen */
+    }
+
+    button {
+      margin-bottom: 20px; /* Espacio extra para separar el botón de la imagen */
+    }
+  }
+}
+
+.custom-button {
+  background-color: #01458e;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border-radius: 40px;
+
+  &:hover {
+    background-color: #003680;
+  }
+}

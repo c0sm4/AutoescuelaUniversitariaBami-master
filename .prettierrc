@@ -1,0 +1,15 @@
+printWidth: 80
+singleQuote: true
+tabWidth: 2
+useTabs: false
+arrowParens: avoid
+bracketSameLine: false
+semi: true
+trailingComma: all
+plugins:
+  - prettier-plugin-packagejson
+  - prettier-plugin-java
+overrides:
+  - files: "*.java"
+    options:
+      tabWidth: 4

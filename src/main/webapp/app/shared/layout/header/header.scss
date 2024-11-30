@@ -1,0 +1,143 @@
+$header-color: #fff;
+$header-color-secondary: #bbb;
+$header-color-hover: darken($header-color, 20%);
+
+/* ==========================================================================
+Navbar styles
+========================================================================== */
+
+.jh-navbar .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-version {
+  font-size: 0.65em;
+  color: $header-color-secondary;
+  padding: 0 0 0 10px;
+}
+
+.brand-logo {
+  margin-left: 0; /* Elimina cualquier margen izquierdo */
+  margin-right: auto; /* Empuja otros elementos hacia la derecha */
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  &:hover {
+    text-decoration: none; /* Elimina el subrayado al pasar el mouse */
+  }
+
+  .brand-icon {
+    height: 5vh; /* Aumenta la altura del logo */
+    width: auto; /* Mantiene la proporción */
+    margin-right: 10px; /* Agrega espacio entre el logo y el texto */
+    display: inline-block;
+
+    img {
+      width: 18vh; /* Ajusta el tamaño de la imagen del logo */
+    }
+  }
+}
+@font-face {
+  font-family: 'TT Commons Pro'; /* Nombre de la fuente */
+  src: url('/content/fonts/fuente.ttf') format('opentype'); /* Ruta al archivo OTF */
+  font-weight: normal; /* Cambia esto según el peso de tu fuente */
+  font-style: normal; /* Cambia esto si la fuente es cursiva */
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+  color: $header-color;
+  &:hover {
+    color: $header-color-hover;
+    text-decoration: none;
+  }
+}
+
+.loading-bar {
+  height: 3px;
+  background-color: #670101;
+  position: absolute;
+  top: 0px;
+  z-index: 1031;
+}
+
+/* Alinear los elementos a la izquierda */
+.align-items-left {
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+/* Alinear los elementos a la derecha */
+.align-items-right {
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+.navbar .no-margin {
+  margin-right: 0 !important; /* Fuerza a eliminar el margen */
+}
+
+.navbar .nav-item {
+  margin-right: 1.5rem; /* Separación para todos los elementos */
+}
+
+.navbar .nav-link {
+  font-family: 'TT Commons Pro'; /* Mantén la fuente */
+  color: #01458e; /* Color del texto */
+  font-size: 2.5vh;
+}
+
+.navbar .nav-link:hover {
+  color: #555; /* Gris oscuro para el hover (opcional) */
+}
+
+.navbar .login-button {
+  margin-right: 0 !important; /* Fuerza a eliminar el margen */
+  border-radius: 40px; /* Esquinas redondeadas */
+  background-color: #01458e; /* Fondo azul */
+  padding: 15px 30px; /* Incrementa el padding para hacer el botón más grande */
+  color: #ffffff !important; /* Fuerza el color blanco */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Comportamiento de botón */
+  font-size: 1.5vh; /* Mantén el texto pequeño */
+  min-width: 20vh; /* Establece un ancho mínimo */
+  text-align: center; /* Centra el texto */
+  line-height: 1.5; /* Ajusta la altura de línea para centrar el texto */
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Animación al pasar el mouse */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* Empuja el toggler hacia la derecha */
+  margin-right: 0; /* Elimina margen derecho */
+  background-color: #9b9b9b; /* Color de fondo */
+  border: none; /* Elimina el borde */
+  border-radius: 50%; /* Hace que el botón sea redondo */
+  padding: 0; /* Elimina el relleno interno */
+  width: 50px; /* Define el ancho */
+  height: 50px; /* Define el alto */
+  display: flex; /* Activa flexbox para centrar contenido */
+  align-items: center; /* Centra contenido verticalmente */
+  justify-content: center; /* Centra contenido horizontalmente */
+
+  &:hover {
+    background-color: darken(#ccc, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+}
+.navbar .nav-item:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.bg-light {
+  background-color: #e1e1e1 !important; /* Gris claro */
+}

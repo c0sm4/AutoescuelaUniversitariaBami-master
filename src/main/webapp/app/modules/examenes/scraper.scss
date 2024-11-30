@@ -1,0 +1,73 @@
+.scraper-container {
+  width: 100%; /* Ocupa el 100% del ancho */
+  height: calc(
+    100vh - 10vh
+  ); /* Ocupa todo el alto disponible menos el margen del contenedor padre */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.scraper-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0033a0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.input-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0033a0;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.scraper-container input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 3px solid #000000;
+  border-radius: 1px;
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.scraper-container input:focus {
+  outline: none;
+  border-color: #002080;
+  background-color: #e6e6e6;
+}
+
+.scraper-container button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #0033a0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scraper-container button:hover {
+  background-color: #002080;
+}
+
+.scraper-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
