@@ -34,11 +34,10 @@ export default function MyExams() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-start', // Cambiado a flex-start
-        padding: '12vh', // Espaciado alrededor del contenido
+        justifyContent: 'flex-start',
+        padding: '10vh 2vw', // Espaciado alrededor del contenido
         height: '100vh',
-        overflowY: 'auto', // Permite el scroll vertical
-        boxSizing: 'border-box', // Incluye padding en el cálculo del tamaño
+        boxSizing: 'border-box',
       }}
     >
       {/* Título */}
@@ -49,11 +48,12 @@ export default function MyExams() {
       {/* Contenedor de exámenes */}
       <div
         style={{
-          width: '90vw',
+          width: '100%',
           maxWidth: '80vw',
           display: 'flex',
           flexDirection: 'column',
-          gap: '3vh',
+          gap: '2vh',
+          maxHeight: 'calc(100vh - 12vh)', // Asegura que el contenedor no se salga de la vista
         }}
       >
         {mockData.map((exam, index) => (
@@ -62,15 +62,18 @@ export default function MyExams() {
             style={{
               border: '1px solid #ccc',
               borderRadius: '10px',
-              padding: '3vh',
+              padding: '2vh',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
               textAlign: 'center',
-              marginBottom: index === mockData.length - 1 ? '2vh' : '2vh', // Espaciado extra al último elemento
             }}
           >
             {/* Tipo de examen */}
             <h3
-              style={{ color: '#01458e', fontSize: '3vh', marginBottom: '2vh' }}
+              style={{
+                color: '#01458e',
+                fontSize: '3vh',
+                marginBottom: '2vh',
+              }}
             >
               {exam.teorico ? 'Examen Teórico' : 'Examen Práctico'}
             </h3>

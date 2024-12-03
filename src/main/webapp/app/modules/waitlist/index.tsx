@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Waitlist() {
   const mockPosition = 4; // Tu posición actual en la lista (1 es el primero).
@@ -8,6 +8,18 @@ export default function Waitlist() {
   const progressPercentage =
     ((totalPositions - mockPosition + 1) / totalPositions) * 100;
 
+  useEffect(() => {
+    // Desactivar la barra de desplazamiento en el cuerpo y html
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    // Limpiar al desmontar el componente
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -15,10 +27,11 @@ export default function Waitlist() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
+        height: '100%', // Asegúrate de que el contenedor ocupe todo el alto
         backgroundColor: '#e0e0e0', // Fondo gris
         padding: '20px',
         boxSizing: 'border-box',
+        overflow: 'hidden', // Asegura que no haya desbordamiento dentro del contenedor
       }}
     >
       {/* Título */}

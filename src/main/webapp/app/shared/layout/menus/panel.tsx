@@ -37,7 +37,7 @@ const accountMenuItemsAuthenticated = () => (
       Lista de espera
     </MenuItem>
 
-    <MenuItem icon={faStar} to="/examenes" data-cy="examenes">
+    <MenuItem icon={faStar} to="/reviews" data-cy="reviews">
       Reseñas
     </MenuItem>
   </>

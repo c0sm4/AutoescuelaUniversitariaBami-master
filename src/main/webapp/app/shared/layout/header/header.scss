@@ -2,9 +2,9 @@ $header-color: #fff;
 $header-color-secondary: #bbb;
 $header-color-hover: darken($header-color, 20%);
 
-/* ==========================================================================
-Navbar styles
-========================================================================== */
+/* ========================================================================== */
+/* Navbar styles */
+/* ========================================================================== */
 
 .jh-navbar .navbar-nav .nav-link {
   padding-right: 0;
@@ -38,6 +38,7 @@ Navbar styles
     }
   }
 }
+
 @font-face {
   font-family: 'TT Commons Pro'; /* Nombre de la fuente */
   src: url('/content/fonts/fuente.ttf') format('opentype'); /* Ruta al archivo OTF */
@@ -76,6 +77,7 @@ Navbar styles
   justify-content: flex-end; /* Alinea el contenido a la derecha */
   align-items: center; /* Alinea verticalmente los elementos al centro */
 }
+
 .navbar .no-margin {
   margin-right: 0 !important; /* Fuerza a eliminar el margen */
 }
@@ -85,13 +87,23 @@ Navbar styles
 }
 
 .navbar .nav-link {
-  font-family: 'TT Commons Pro'; /* Mantén la fuente */
-  color: #01458e; /* Color del texto */
+  font-family: 'TT Commons Pro'; /* Fuente */
+  color: #01458e; /* Color del texto predeterminado */
   font-size: 2.5vh;
+  text-decoration: none; /* Sin subrayado por defecto */
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease; /* Transición suave */
 }
 
 .navbar .nav-link:hover {
-  color: #555; /* Gris oscuro para el hover (opcional) */
+  color: #555; /* Color gris oscuro al pasar el mouse */
+}
+
+.navbar .nav-link.active {
+  color: #01458e; /* Mantén el color original */
+  text-decoration: underline; /* Añade el subrayado */
+  font-weight: bold; /* Opcional: resaltar el enlace activo */
 }
 
 .navbar .login-button {
@@ -134,10 +146,20 @@ Navbar styles
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
   }
 }
+
 .navbar .nav-item:last-child {
   margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
 
 .bg-light {
   background-color: #e1e1e1 !important; /* Gris claro */
+}
+
+/* Estilos para el contenedor principal */
+.main-content {
+  margin-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+  padding: 20px;
+  min-height: calc(
+    100vh - 60px
+  ); /* Ajusta este valor según la altura de tu navbar */
 }

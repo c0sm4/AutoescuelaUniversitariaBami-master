@@ -83,7 +83,6 @@ const Header = (props: IHeaderProps) => {
           className="align-items-right"
         />
 
-
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="me-auto" navbar></Nav>
           <Nav className="ms-auto" navbar>
@@ -108,7 +107,6 @@ const Header = (props: IHeaderProps) => {
             )}
             {props.isAuthenticated && props.isAdmin && (
               <>
-                <AdminMenu showOpenAPI={props.isOpenAPIEnabled} />
                 <PanelControl isAuthenticated={props.isAuthenticated} />
                 <AccountMenu isAuthenticated={props.isAuthenticated} />
               </>

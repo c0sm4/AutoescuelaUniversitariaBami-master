@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
-  min-height: 100vh;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
   max-width: 1200px; /* Define un ancho máximo */
-  margin: -8vh auto 0 auto; /* Centra horizontalmente y ajusta el margen superior */
+  margin: 0 auto; /* Centra horizontalmente */
   background-color: transparent; /* Fondo translúcido */
   padding: 0 15px; /* Espaciado interno para que no toque los bordes */
+  overflow: hidden; /* Elimina cualquier scroll dentro del contenedor */
 
   h2.sobre-nosotros {
     font-family: 'TT Commons Pro', sans-serif;
@@ -58,6 +59,11 @@
       margin-bottom: 20px; /* Espacio extra para separar el botón de la imagen */
     }
   }
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Elimina el scroll global */
 }
 
 .custom-button {
