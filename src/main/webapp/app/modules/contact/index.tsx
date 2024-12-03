@@ -8,16 +8,16 @@ export default function Contact() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '20px',
+        padding: '15px', // Reduje el padding
         textAlign: 'center',
         color: '#01458e',
-        fontFamily: 'sans-serif', // Asegura que se use la fuente sans-serif predeterminada
+        fontFamily: 'sans-serif',
       }}
     >
       {/* Encabezado */}
       <h1
         style={{
-          fontSize: '2.5em',
+          fontSize: '1.8em', // Tamaño más pequeño
           fontWeight: 'bold',
           textTransform: 'uppercase',
         }}
@@ -29,12 +29,19 @@ export default function Contact() {
       <img
         src="content/images/logo.png" // Cambiar por la ruta de tu logo
         alt="Logo Autoescuela"
-        style={{ width: '150px', margin: '20px 0' }} // Tamaño del logo
+        style={{
+          width: '120px', // Logo más pequeño
+          margin: '15px 0',
+        }}
       />
 
       {/* Sección de contacto */}
       <div
-        style={{ fontSize: '1.2em', lineHeight: '1.8', fontWeight: 'normal' }}
+        style={{
+          fontSize: '1em', // Texto más pequeño
+          lineHeight: '1.6',
+          fontWeight: 'normal',
+        }}
       >
         <h5 style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
           Contacto:

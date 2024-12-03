@@ -15,7 +15,7 @@ const Cobros: React.FC = () => {
     (state: RootState) => state.libro,
   );
 
-  const librosPerPage = 10;
+  const librosPerPage = 4;
   const totalPages = Math.ceil(libros.length / librosPerPage);
 
   const currentLibros = libros.slice(
@@ -58,7 +58,7 @@ const Cobros: React.FC = () => {
           id="titulo"
           type="text"
           value={titulo}
-          onChange={(e) => setTitulo(e.target.value)}
+          onChange={e => setTitulo(e.target.value)}
         />
       </div>
       <div className="input-container">
@@ -67,19 +67,21 @@ const Cobros: React.FC = () => {
           id="url"
           type="text"
           value={url}
-          onChange={(e) => setUrl(e.target.value)}
+          onChange={e => setUrl(e.target.value)}
         />
       </div>
-      <button onClick={handleAddLibro} disabled={loading} className="add-button">
+      <button
+        onClick={handleAddLibro}
+        disabled={loading}
+        className="add-button"
+      >
         {loading ? 'Cargando...' : 'Añadir Libro'}
       </button>
 
       {/* Tabla de libros */}
       <div className="libros-table">
         {loading && <p>Cargando libros...</p>}
-        {errorMessage && (
-          <p>Error: {errorMessage}</p>
-        )}
+        {errorMessage && <p>Error: {errorMessage}</p>}
         {!loading && !errorMessage && (
           <>
             <table>
@@ -90,15 +92,23 @@ const Cobros: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentLibros.map((libro) => (
+                {currentLibros.map(libro => (
                   <tr key={libro.id}>
                     <td>
-                      <a href={libro.url} target="_blank" rel="noopener noreferrer" className="titulo-link">
+                      <a
+                        href={libro.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="titulo-link"
+                      >
                         {libro.titulo}
                       </a>
                     </td>
                     <td>
-                      <button onClick={() => handleDeleteLibro(libro.id)} className="delete-button">
+                      <button
+                        onClick={() => handleDeleteLibro(libro.id)}
+                        className="delete-button"
+                      >
                         Borrar
                       </button>
                     </td>

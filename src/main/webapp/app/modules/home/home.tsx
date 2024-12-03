@@ -1,10 +1,18 @@
+import React, { useEffect } from 'react';
 import './home.scss';
-
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Row, Button } from 'reactstrap';
 
 export const Home = () => {
+  useEffect(() => {
+    // Deshabilita el scroll cuando se monta el componente
+    document.body.style.overflow = 'hidden';
+    return () => {
+      // Restaura el scroll al desmontar el componente
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <div className="home-container">
       <Row className="align-items-center justify-content-center">
@@ -29,7 +37,7 @@ export const Home = () => {
         </Col>
         <Col md="6" className="text-center">
           <img
-            src="https://media.istockphoto.com/id/621601764/es/foto/conducir-coche-en-la-carretera.jpg?s=612x612&w=0&k=20&c=ydzbAPDnc4Xdd0iUpkHQM7Tf84bFrNAJ5vc7K6CgHew=" // Reemplaza con la URL de tu imagen
+            src="https://media.istockphoto.com/id/621601764/es/foto/conducir-coche-en-la-carretera.jpg?s=612x612&w=0&k=20&c=ydzbAPDnc4Xdd0iUpkHQM7Tf84bFrNAJ5vc7K6CgHew="
             alt="Autoescuela Universitaria"
             className="img-fluid rounded"
           />
